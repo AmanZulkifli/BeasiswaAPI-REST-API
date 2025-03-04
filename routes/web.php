@@ -18,6 +18,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->post('/login', 'UserController@login');
+$router->post('/signup', 'UserController@store');
 
 $router->group(['middleware' => 'auth'], function () use ($router) {
     $router->group(['prefix' => 'scholarships'], function () use ($router) {
@@ -29,7 +30,6 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
     
     $router->group(['prefix' => 'users'], function () use ($router) {
         $router->get('/', 'UserController@index');
-        $router->post('/signup', 'UserController@store');
         $router->get('/me', 'UserController@profile');
         $router->patch('/{id}', 'UserController@update');
         $router->delete('/{id}', 'UserController@destroy');
