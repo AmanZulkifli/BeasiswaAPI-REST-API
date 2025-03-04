@@ -29,7 +29,7 @@ $router->group(['middleware' => 'auth'], function () use ($router) {
     
     $router->group(['prefix' => 'users'], function () use ($router) {
         $router->get('/', 'UserController@index');
-        $router->post('/', 'UserController@store');
+        $router->post('/signup', 'UserController@store');
         $router->get('/me', 'UserController@profile');
         $router->patch('/{id}', 'UserController@update');
         $router->delete('/{id}', 'UserController@destroy');
