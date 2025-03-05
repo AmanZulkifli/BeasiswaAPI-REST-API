@@ -10,8 +10,8 @@ class TimeRequest
         $rules = [
             'scholarship_id' => 'required|exists:scholarships,id',
             'detail_id' => 'required|exists:details,id',
-            'time_plus' => 'nullable|integer|min:0',
-            'time_minus' => 'nullable|integer|min:0',
+            'semester_plus' => 'nullable|integer|min:0',
+            'semester_minus' => 'nullable|integer',
         ];
 
         $validator = app(Factory::class)->make($request->all(), $rules);

@@ -13,8 +13,8 @@ class TimeResource extends JsonResource
             'scholarship' => new ScholarshipResource($this->whenLoaded('scholarship')), // Menampilkan data scholarship
             'detail_id' => $this->detail_id,
             'detail' => new DetailResource($this->whenLoaded('detail')), // Menampilkan data detail
-            'time_plus' => $this->time_plus,
-            'time_minus' => $this->time_minus,
+            'semester_plus' => $this->semester_plus,
+            'semester_minus' => $this->semester_minus,
         ];
     }
 }

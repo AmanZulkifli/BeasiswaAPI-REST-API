@@ -13,7 +13,7 @@ class TimeRepository
 
         // Update semester di tabel detail
         if ($detail = Detail::find($data['detail_id'])) {
-            $detail->updateWaktuBulan($data['time_plus'] ?? 0, $data['time_minus'] ?? 0);
+            $detail->updateWaktuBulan($data['semester_plus'] ?? 0, $data['semester_minus'] ?? 0);
         }
 
         // Load relasi setelah penyimpanan

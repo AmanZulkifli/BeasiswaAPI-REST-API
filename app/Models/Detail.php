@@ -28,13 +28,13 @@ class Detail extends Model
         return $this->hasMany(Time::class, 'detail_id');
     }
 
-    public function updateWaktuBulan($time_plus, $time_minus)
+    public function updateWaktuBulan($semester_plus, $semester_minus)
 {
-    $time_plus = $time_plus ?? 0;
-    $time_minus = $time_minus ?? 0;
+    $semester_plus = $semester_plus ?? 0;
+    $semester_minus = $semester_minus ?? 0;
 
-    $this->semester += $time_plus;
-    $this->semester -= $time_minus;
+    $this->semester += $semester_plus;
+    $this->semester -= $semester_minus;
 
     if ($this->semester <= 0) {
         $this->semester = 0;

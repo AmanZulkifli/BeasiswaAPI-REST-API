@@ -15,8 +15,8 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->uuid('detail_id');
             $table->uuid('scholarship_id');
-            $table->integer('time_plus');
-            $table->integer('time_minus');
+            $table->integer('semester_plus');
+            $table->integer('semester_minus');
             $table->softDeletes();
             $table->timestamps();
         });

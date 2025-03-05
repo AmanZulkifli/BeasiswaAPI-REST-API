@@ -10,7 +10,7 @@ class Time extends Model
 {
     use HasUuids, HasFactory;
 
-    protected $fillable = ['scholarship_id', 'detail_id', 'time_plus', 'time_minus'];
+    protected $fillable = ['scholarship_id', 'detail_id', 'semester_plus', 'semester_minus'];
 
     public function scholarship()
     {
